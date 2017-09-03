@@ -35,6 +35,25 @@ Or, you can omit the option `--printer` by adding the option into your `phpunit.
 ```
 
 
+## Dependencies
+
+This package depends on the following packages.
+
+- `phpunit/phpunit`
+- `symfony/yaml`
+
+For the detailed dependencies, please have a look at the Packagist page.
+
+- <a href="https://packagist.org/packages/gh640/phpunit-tap">gh640/phpunit-tap - Packagist</a>
+
+
+## Issues
+
+If you find an issue, please file it in the issue queue.
+
+<a href="/gh640/phpunit-tap/issues">Issues · gh640/phpunit-tap · GitHub</a>
+
+
 ## Reference
 
 - PHPUnit
