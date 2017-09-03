@@ -2,6 +2,8 @@
 
 A simple Composer package which provides a TAP result printer for PHPUnit.
 
+![capture](https://raw.githubusercontent.com/gh640/phpunit-tap/master/assets/capture.gif)
+
 
 # Usage
 
