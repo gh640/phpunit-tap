@@ -7,7 +7,7 @@ A simple Composer package which provides a TAP result printer for [PHPUnit](http
 Most of the code is blatantly copied from the official [PHPUnit TAP logger](https://github.com/sebastianbergmann/phpunit/blob/5.7/src/Util/Log/TAP.php).
 
 
-# Usage
+## Usage
 
 Install the package with Composer.
 
@@ -35,6 +35,15 @@ Or, you can omit the option `--printer` by adding the option into your `phpunit.
 ```
 
 
-# License
+## Reference
+
+- PHPUnit
+    - <a href="https://phpunit.de/">PHPUnit – The PHP Testing Framework</a>
+- TAP (Test Anything Protocol)
+    - <a href="https://testanything.org/">Test Anything Protocol</a>
+    - <a href="https://en.wikipedia.org/wiki/Test_Anything_Protocol">Test Anything Protocol - Wikipedia</a>
+
+
+## License
 
 Licensed under the MIT license.
