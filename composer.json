@@ -1,0 +1,28 @@
+{
+    "name": "gh640/phpunit-tap",
+    "description": "Provides a TAP result printer for PHPUnit.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["test","phpunit", "tap", "phpunit reporter"],
+    "homepage": "https://github.com/gh640/phpunit-tap",
+    "authors": [
+        {
+            "name": "Goto Hayato",
+            "email": "habita.gh@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "gh640\\PhpunitTap\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/yaml": "^v3.3.8",
+        "phpunit/phpunit": "^5.7"
+    },
+    "scripts": {
+        "test": "phpunit tests",
+        "test:success": "phpunit tests/SuccessTest",
+        "test:failure": "phpunit tests/FailureTest"
+    }
+}

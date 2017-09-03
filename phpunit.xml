@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+  beStrictAboutTestsThatDoNotTestAnything="true"
+  beStrictAboutOutputDuringTests="true"
+  beStrictAboutCoversAnnotation="true"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  mapTestClassNameToCoveredClassName="true"
+  printerClass="gh640\PhpunitTap\TapResultPrinter"
+  verbose="true"
+>
+  <logging>
+    <log type="testdox-html" target="log/testdox.html"/>
+    <log type="testdox-text" target="log/testdox.txt"/>
+  </logging>
+  <testsuites>
+    <testsuite name="All">
+      <directory>tests</directory>
+      <file>tests/**/*Test.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
