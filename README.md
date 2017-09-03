@@ -61,6 +61,14 @@ If you find an issue, please file it in the issue queue.
 - TAP (Test Anything Protocol)
     - <a href="https://testanything.org/">Test Anything Protocol</a>
     - <a href="https://en.wikipedia.org/wiki/Test_Anything_Protocol">Test Anything Protocol - Wikipedia</a>
+- Other PHPUnit printers: You might be interested in the other PHPUnit printers.
+    - <a href="https://packagist.org/packages/whatthejeff/nyancat-phpunit-resultprinter">whatthejeff/nyancat-phpunit-resultprinter - Packagist</a>
+    - <a href="https://packagist.org/packages/memio/pretty-printer">memio/pretty-printer - Packagist</a>
+    - <a href="https://packagist.org/packages/thru.io/json-pretty-printer">thru.io/json-pretty-printer - Packagist</a>
+    - <a href="https://packagist.org/packages/kujira/phpunit-printer">kujira/phpunit-printer - Packagist</a>
+    - <a href="https://packagist.org/packages/scriptfusion/phpunit-immediate-exception-printer">scriptfusion/phpunit-immediate-exception-printer - Packagist</a>
+    - <a href="https://packagist.org/packages/diablomedia/phpunit-pretty-printer">diablomedia/phpunit-pretty-printer - Packagist</a>
+    - <a href="https://packagist.org/packages/zf2timo/phpunit-pretty-result-printer">zf2timo/phpunit-pretty-result-printer - Packagist</a>
 
 
 ## License
