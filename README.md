@@ -1,5 +1,7 @@
 # gh640/phpunit-tap
 
+[![Build Status](https://travis-ci.org/gh640/phpunit-tap.svg?branch=master)](https://travis-ci.org/gh640/phpunit-tap)
+
 A simple Composer package which provides a TAP result printer for [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 
 ![capture](https://raw.githubusercontent.com/gh640/phpunit-tap/master/assets/capture.gif)
