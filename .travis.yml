@@ -6,4 +6,4 @@ php:
 before_script:
   - composer install
 
-script: phpunit tests/SuccessTest.php
+script: vendor/bin/phpunit tests/SuccessTest.php
