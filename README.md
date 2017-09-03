@@ -13,7 +13,7 @@ Install the package with Composer.
 
     $ composer require --dev gh640/phpunit-tap
 
-Use the TAP result printer with your PHPUnit tests with the `--printer` option.
+Specify the TAP result printer with the `--printer` option when running `phpunit`. The printer's FQCN is `gh640\PhpunitTap\TapResultPrinter`.
 
     $ phpunit --printer gh640\PhpunitTap\TapResultPrinter [your test file]
 
