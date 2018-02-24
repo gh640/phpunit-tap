@@ -37,6 +37,9 @@ class TapResultPrinter extends ResultPrinter
      */
     protected $testSuccessful = true;
 
+    /**
+     * {@inheritdoc}
+     */
     public function __construct($out = null, $verbose = false, $colors = self::COLOR_DEFAULT, $debug = false, $numberOfColumns = 80, $reverse = false)
     {
         parent::__construct($out, $verbose, $colors, $debug, $numberOfColumns, $reverse);
