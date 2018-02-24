@@ -47,7 +47,7 @@ class TapResultPrinter extends ResultPrinter
      * An error occurred.
      *
      * @param Test $test
-     * @param \Exception              $e
+     * @param \Throwable $t
      * @param float                  $time
      */
     public function addError(Test $test, \Throwable $t, float $time): void
@@ -107,7 +107,7 @@ class TapResultPrinter extends ResultPrinter
      * Incomplete test.
      *
      * @param Test $test
-     * @param \Exception              $e
+     * @param \Throwable $t
      * @param float                  $time
      */
     public function addIncompleteTest(Test $test, \Throwable $e, float $time): void
@@ -119,7 +119,7 @@ class TapResultPrinter extends ResultPrinter
      * Risky test.
      *
      * @param Test $test
-     * @param \Exception              $e
+     * @param \Throwable $t
      * @param float                  $time
      */
     public function addRiskyTest(Test $test, \Throwable $e, float $time): void
@@ -138,7 +138,7 @@ class TapResultPrinter extends ResultPrinter
      * Skipped test.
      *
      * @param Test $test
-     * @param \Exception              $e
+     * @param \Throwable $t
      * @param float                  $time
      */
     public function addSkippedTest(Test $test, \Throwable $e, float $time): void
