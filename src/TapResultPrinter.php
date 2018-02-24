@@ -48,7 +48,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param Test $test
      * @param \Throwable $t
-     * @param float                  $time
+     * @param float $time
      */
     public function addError(Test $test, \Throwable $t, float $time): void
     {
@@ -58,9 +58,9 @@ class TapResultPrinter extends ResultPrinter
     /**
      * A warning occurred.
      *
-     * @param Test                      $test
+     * @param Test $test
      * @param Warning $e
-     * @param float                     $time
+     * @param float $time
      */
     public function addWarning(Test $test, Warning $e, float $time): void
     {
@@ -70,9 +70,9 @@ class TapResultPrinter extends ResultPrinter
     /**
      * A failure occurred.
      *
-     * @param Test                                   $test
+     * @param Test $test
      * @param AssertionFailedError $e
-     * @param float                                  $time
+     * @param float $time
      */
     public function addFailure(Test $test, AssertionFailedError $e, float $time): void
     {
@@ -108,7 +108,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param Test $test
      * @param \Throwable $t
-     * @param float                  $time
+     * @param float $time
      */
     public function addIncompleteTest(Test $test, \Throwable $e, float $time): void
     {
@@ -120,7 +120,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param Test $test
      * @param \Throwable $t
-     * @param float                  $time
+     * @param float $time
      */
     public function addRiskyTest(Test $test, \Throwable $e, float $time): void
     {
@@ -139,7 +139,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param Test $test
      * @param \Throwable $t
-     * @param float                  $time
+     * @param float $time
      */
     public function addSkippedTest(Test $test, \Throwable $e, float $time): void
     {
@@ -191,7 +191,7 @@ class TapResultPrinter extends ResultPrinter
      * A test ended.
      *
      * @param Test $test
-     * @param float                  $time
+     * @param float $time
      */
     public function endTest(Test $test, float $time): void
     {
@@ -209,8 +209,8 @@ class TapResultPrinter extends ResultPrinter
 
     /**
      * @param Test $test
-     * @param string                 $prefix
-     * @param string                 $directive
+     * @param string $prefix
+     * @param string $directive
      */
     protected function writeNotOk(Test $test, $prefix = '', $directive = '')
     {
