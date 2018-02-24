@@ -50,7 +50,7 @@ class TapResultPrinter extends ResultPrinter
      * @param \Exception              $e
      * @param float                  $time
      */
-    public function addError(Test $test, \Exception $e, $time)
+    public function addError(Test $test, \Throwable $t, float $time): void
     {
         $this->writeNotOk($test, 'Error');
     }
@@ -62,7 +62,7 @@ class TapResultPrinter extends ResultPrinter
      * @param Warning $e
      * @param float                     $time
      */
-    public function addWarning(Test $test, Warning $e, $time)
+    public function addWarning(Test $test, Warning $e, float $time): void
     {
         $this->writeNotOk($test, 'Warning');
     }
@@ -74,7 +74,7 @@ class TapResultPrinter extends ResultPrinter
      * @param AssertionFailedError $e
      * @param float                                  $time
      */
-    public function addFailure(Test $test, AssertionFailedError $e, $time)
+    public function addFailure(Test $test, AssertionFailedError $e, float $time): void
     {
         $this->writeNotOk($test, 'Failure');
         $message = explode(
@@ -110,7 +110,7 @@ class TapResultPrinter extends ResultPrinter
      * @param \Exception              $e
      * @param float                  $time
      */
-    public function addIncompleteTest(Test $test, \Exception $e, $time)
+    public function addIncompleteTest(Test $test, \Throwable $e, float $time): void
     {
         $this->writeNotOk($test, '', 'TODO Incomplete Test');
     }
@@ -122,7 +122,7 @@ class TapResultPrinter extends ResultPrinter
      * @param \Exception              $e
      * @param float                  $time
      */
-    public function addRiskyTest(Test $test, \Exception $e, $time)
+    public function addRiskyTest(Test $test, \Throwable $e, float $time): void
     {
         $this->write(
             sprintf(
@@ -141,7 +141,7 @@ class TapResultPrinter extends ResultPrinter
      * @param \Exception              $e
      * @param float                  $time
      */
-    public function addSkippedTest(Test $test, \Exception $e, $time)
+    public function addSkippedTest(Test $test, \Throwable $e, float $time): void
     {
         $this->write(
             sprintf(
@@ -158,7 +158,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param TestSuite $suite
      */
-    public function startTestSuite(TestSuite $suite)
+    public function startTestSuite(TestSuite $suite): void
     {
         $this->testSuiteLevel++;
     }
@@ -168,7 +168,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param TestSuite $suite
      */
-    public function endTestSuite(TestSuite $suite)
+    public function endTestSuite(TestSuite $suite): void
     {
         $this->testSuiteLevel--;
         if ($this->testSuiteLevel == 0) {
@@ -181,7 +181,7 @@ class TapResultPrinter extends ResultPrinter
      *
      * @param Test $test
      */
-    public function startTest(Test $test)
+    public function startTest(Test $test): void
     {
         $this->testNumber++;
         $this->testSuccessful = true;
@@ -193,14 +193,14 @@ class TapResultPrinter extends ResultPrinter
      * @param Test $test
      * @param float                  $time
      */
-    public function endTest(Test $test, $time)
+    public function endTest(Test $test, float $time): void
     {
         if ($this->testSuccessful === true) {
             $this->write(
                 sprintf(
                     "ok %d - %s\n",
                     $this->testNumber,
-                    TestUtil::describe($test)
+                    TestUtil::describeAsString($test)
                 )
             );
         }
