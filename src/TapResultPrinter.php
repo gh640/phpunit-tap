@@ -222,7 +222,7 @@ class TapResultPrinter extends ResultPrinter
                 "not ok %d - %s%s%s\n",
                 $this->testNumber,
                 $prefix != '' ? $prefix . ': ' : '',
-                TestUtil::describe($test),
+                TestUtil::describeAsString($test),
                 $directive != '' ? ' # ' . $directive : ''
             )
         );
