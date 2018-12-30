@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\TestFailure;
 use PHPUnit\Framework\TestSuite;
 use PHPUnit\Framework\Warning;
+use PHPUnit\Runner\PhptTestCase;
 use PHPUnit\TextUI\ResultPrinter;
 use PHPUnit\Util\Test as TestUtil;
 use Symfony\Component\Yaml\Dumper;
@@ -207,6 +208,13 @@ class TapResultPrinter extends ResultPrinter
                 )
             );
         }
+
+        if ($test instanceof TestCase) {
+            $this->numAssertions += $test->getNumAssertions();
+        } elseif ($test instanceof PhptTestCase) {
+            $this->numAssertions++;
+        }
+
         $this->writeDiagnostics($test);
     }
 
