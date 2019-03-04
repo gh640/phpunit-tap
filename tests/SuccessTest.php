@@ -16,11 +16,10 @@ class SuccessTest extends TestCase {
     $this->assertEquals($that, $it);
   }
 
-  /**
-   * @expectedException UnexpectedValueException
-   */
   public function testException()
   {
+    $this->expectException(UnexpectedValueException::class);
+
     throw new UnexpectedValueException('This is really unexpected.');
   }
 
