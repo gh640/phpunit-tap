@@ -8,7 +8,6 @@
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
   convertWarningsToExceptions="true"
-  mapTestClassNameToCoveredClassName="true"
   printerClass="gh640\PhpunitTap\TapResultPrinter"
   verbose="true"
 >
