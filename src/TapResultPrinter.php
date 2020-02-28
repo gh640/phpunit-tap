@@ -16,9 +16,6 @@ use Symfony\Component\Yaml\Dumper;
 
 /**
  * A TAP result printer.
- *
- * Most of the code is blatantly copied from the PHPUnit official TAP logger.
- * https://github.com/sebastianbergmann/phpunit/blob/5.7/src/Util/Log/TAP.php
  */
 class TapResultPrinter extends DefaultResultPrinter
 {
