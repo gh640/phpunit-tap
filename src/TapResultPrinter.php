@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestFailure;
 use PHPUnit\Framework\TestSuite;
 use PHPUnit\Framework\Warning;
 use PHPUnit\Runner\PhptTestCase;
-use PHPUnit\TextUI\ResultPrinter;
+use PHPUnit\TextUI\DefaultResultPrinter;
 use PHPUnit\Util\Test as TestUtil;
 use Symfony\Component\Yaml\Dumper;
 
@@ -20,7 +20,7 @@ use Symfony\Component\Yaml\Dumper;
  * Most of the code is blatantly copied from the PHPUnit official TAP logger.
  * https://github.com/sebastianbergmann/phpunit/blob/5.7/src/Util/Log/TAP.php
  */
-class TapResultPrinter extends ResultPrinter
+class TapResultPrinter extends DefaultResultPrinter
 {
 
     /**
@@ -223,7 +223,7 @@ class TapResultPrinter extends ResultPrinter
      * @param string $prefix
      * @param string $directive
      */
-    protected function writeNotOk(Test $test, $prefix = '', $directive = '')
+    protected function writeNotOk(Test $test, $prefix = '', $directive = ''): void
     {
         $this->write(
             sprintf(
@@ -240,7 +240,7 @@ class TapResultPrinter extends ResultPrinter
     /**
      * @param Test $test
      */
-    private function writeDiagnostics(Test $test)
+    private function writeDiagnostics(Test $test): void
     {
         if (!$test instanceof TestCase) {
             return;
