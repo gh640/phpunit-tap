@@ -5,7 +5,7 @@ on:
   - push
 
 jobs:
-  build:
+  success_test:
     name: Success tests
 
     runs-on: ubuntu-latest
