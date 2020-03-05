@@ -6,9 +6,6 @@ A simple Composer package which provides a TAP result printer for [PHPUnit](http
 
 ![capture](https://raw.githubusercontent.com/gh640/phpunit-tap/master/assets/capture.gif)
 
-Most of the code is blatantly copied from the official [PHPUnit TAP logger](https://github.com/sebastianbergmann/phpunit/blob/5.7/src/Util/Log/TAP.php).
-
-
 ## Usage
 
 Install the package with Composer.
