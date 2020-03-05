@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  success_test:
+    name: Success tests
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.3"
+          - "7.4"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Validate composer.json
+        run: composer validate
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run success tests
+        run: vendor/bin/phpunit tests/SuccessTest.php
